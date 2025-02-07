@@ -55,21 +55,18 @@ function createListingCard(listing) {
                 <div class="absolute top-4 left-4 flex gap-2">
                     ${listing.is_verified ? `
                         <div class="bg-white/90 backdrop-blur-sm text-patriot-blue px-3 py-1 rounded-full text-sm font-medium flex items-center shadow-lg">
-                            <i data-lucide="shield" class="h-4 w-4 mr-1"></i>
-                            Verified
+                            ✓ Verified
                         </div>
                     ` : ''}
                     ${listing.is_featured ? `
                         <div class="bg-patriot-red/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium flex items-center shadow-lg">
-                            <i data-lucide="tag" class="h-4 w-4 mr-1"></i>
-                            Featured
+                            ★ Featured
                         </div>
                     ` : ''}
                 </div>
                 <div class="absolute bottom-4 left-4">
                     <div class="bg-white/90 backdrop-blur-sm text-patriot-red px-3 py-1 rounded-full text-lg font-bold flex items-center shadow-lg">
-                        <i data-lucide="dollar-sign" class="h-4 w-4"></i>
-                        ${formatPrice(listing.price).replace('$', '')}
+                        ${formatPrice(listing.price)}
                     </div>
                 </div>
             </div>
@@ -81,11 +78,11 @@ function createListingCard(listing) {
                 
                 <div class="space-y-2 mb-4">
                     <div class="flex items-center text-gray-600">
-                        <i data-lucide="map-pin" class="h-4 w-4 mr-2 flex-shrink-0"></i>
+                        <span class="mr-2">📍</span>
                         <span class="text-sm">${listing.location}</span>
                     </div>
                     <div class="flex items-center text-gray-600">
-                        <i data-lucide="calendar" class="h-4 w-4 mr-2 flex-shrink-0"></i>
+                        <span class="mr-2">📅</span>
                         <span class="text-sm">${formatDate(listing.created_at)}</span>
                     </div>
                 </div>
@@ -131,7 +128,7 @@ function showListingDetails(listing) {
                     onclick="closeListingDetails()"
                     class="absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
                 >
-                    <i data-lucide="x" class="h-6 w-6 text-gray-600"></i>
+                    <span class="text-gray-600 text-xl">×</span>
                 </button>
             </div>
 
@@ -145,11 +142,11 @@ function showListingDetails(listing) {
 
                 <div class="space-y-4 mb-6">
                     <div class="flex items-center text-gray-600">
-                        <i data-lucide="map-pin" class="h-5 w-5 mr-2"></i>
+                        <span class="mr-2">📍</span>
                         <span>${listing.location}</span>
                     </div>
                     <div class="flex items-center text-gray-600">
-                        <i data-lucide="calendar" class="h-5 w-5 mr-2"></i>
+                        <span class="mr-2">📅</span>
                         <span>Listed on ${formatDate(listing.created_at)}</span>
                     </div>
                 </div>
@@ -189,7 +186,6 @@ function showListingDetails(listing) {
 
     document.body.appendChild(modal);
     document.body.style.overflow = 'hidden';
-    lucide.createIcons();
 }
 
 // Close listing details modal
@@ -253,10 +249,6 @@ async function initializeListings(containerId, options = {}) {
             container.innerHTML = filteredListings
                 .map(listing => createListingCard(listing))
                 .join('');
-            lucide.createIcons();
         });
     }
-
-    // Initialize icons
-    lucide.createIcons();
 }
