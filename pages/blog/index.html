@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - LRV Forum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#001f3f',
+                        'navy-light': '#003366',
+                        'patriot-red': '#B22234',
+                        'patriot-blue': '#3C3B6E',
+                        'patriot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide-icons/dist/umd/lucide-icons.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-navy shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center group">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                                <div class="text-patriot-red font-bold text-xl">LRV</div>
+                            </div>
+                            <span class="ml-2 text-white font-bold text-xl group-hover:text-patriot-white transition-colors">Forum</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Primary Navigation -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="/pages/buy.html" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="dollar-sign" class="h-5 w-5 mr-2"></i>
+                        Buy
+                    </a>
+                    <a href="/pages/rent.html" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="home" class="h-5 w-5 mr-2"></i>
+                        Rent
+                    </a>
+                    <a href="/pages/sell.html" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="plus-circle" class="h-5 w-5 mr-2"></i>
+                        List
+                    </a>
+                    <a href="/pages/community" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="users" class="h-5 w-5 mr-2"></i>
+                        Community
+                    </a>
+                    <a href="/pages/blog" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="book-open" class="h-5 w-5 mr-2"></i>
+                        Blog
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-navy-light">
+                <div class="grid grid-cols-2 gap-2 px-3 mb-4">
+                    <a href="/pages/buy.html" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="dollar-sign" class="h-5 w-5 mr-2"></i>
+                        Buy
+                    </a>
+                    <a href="/pages/rent.html" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="home" class="h-5 w-5 mr-2"></i>
+                        Rent
+                    </a>
+                    <a href="/pages/sell.html" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="plus-circle" class="h-5 w-5 mr-2"></i>
+                        List
+                    </a>
+                    <a href="/pages/community" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="users" class="h-5 w-5 mr-2"></i>
+                        Community
+                    </a>
+                    <a href="/pages/blog" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition col-span-2">
+                        <i data-lucide="book-open" class="h-5 w-5 mr-2"></i>
+                        Blog
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-navy text-white py-20">
+        <div class="absolute inset-0">
+            <img
+                class="w-full h-full object-cover opacity-20"
+                src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&q=80"
+                alt="Writing desk"
+            />
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center mb-6">
+                <i data-lucide="book-open" class="h-16 w-16 text-patriot-red"></i>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">Timeshare Insights</h1>
+            <p class="text-xl max-w-3xl mx-auto">
+                Expert advice, owner stories, and industry updates to help you make informed decisions.
+            </p>
+        </div>
+    </div>
+
+    <!-- Featured Posts -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-navy mb-12">Featured Articles</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Timeshare Buying Guide -->
+                <article class="bg-gray-50 rounded-lg overflow-hidden shadow-lg">
+                    <img
+                        src="https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?auto=format&fit=crop&q=80"
+                        alt="Contract signing"
+                        class="w-full h-64 object-cover"
+                    />
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="calendar" class="h-5 w-5 text-patriot-red mr-2"></i>
+                            <span class="text-gray-600">February 1, 2025</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy mb-3">
+                            Complete Guide to Buying a Timeshare
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Everything you need to know about purchasing a timeshare, from research to closing. Learn about different ownership types, costs, and key considerations.
+                        </p>
+                        <a href="mailto:support@lrvforum.com?subject=Question about: Complete Guide to Buying a Timeshare" class="text-patriot-blue hover:text-navy transition flex items-center">
+                            <span>Read More</span>
+                            <i data-lucide="arrow-right" class="h-5 w-5 ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Veteran Benefits -->
+                <article class="bg-gray-50 rounded-lg overflow-hidden shadow-lg">
+                    <img
+                        src="https://images.unsplash.com/photo-1579683670728-96c9abc7a088?auto=format&fit=crop&q=80"
+                        alt="Military service"
+                        class="w-full h-64 object-cover"
+                    />
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="calendar" class="h-5 w-5 text-patriot-red mr-2"></i>
+                            <span class="text-gray-600">January 25, 2025</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy mb-3">
+                            Veteran Benefits in Timeshare Ownership
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover special programs, discounts, and financing options available to veterans in the timeshare market. Learn how to maximize your military benefits.
+                        </p>
+                        <a href="mailto:support@lrvforum.com?subject=Question about: Veteran Benefits in Timeshare Ownership" class="text-patriot-blue hover:text-navy transition flex items-center">
+                            <span>Read More</span>
+                            <i data-lucide="arrow-right" class="h-5 w-5 ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Posts -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-navy mb-12">Recent Articles</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Maintenance Fees Article -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="calendar" class="h-5 w-5 text-patriot-red mr-2"></i>
+                            <span class="text-gray-600">January 20, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">
+                            Understanding Maintenance Fees
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            A comprehensive guide to timeshare maintenance fees, what they cover, and how to manage them effectively.
+                        </p>
+                        <a href="mailto:support@lrvforum.com?subject=Question about: Understanding Maintenance Fees" class="text-patriot-blue hover:text-navy transition flex items-center">
+                            <span>Read More</span>
+                            <i data-lucide="arrow-right" class="h-5 w-5 ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Exchange Tips Article -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="calendar" class="h-5 w-5 text-patriot-red mr-2"></i>
+                            <span class="text-gray-600">January 15, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">
+                            Maximizing Exchange Value
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Tips and strategies for getting the most value from your timeshare exchanges and trading power.
+                        </p>
+                        <a href="mailto:support@lrvforum.com?subject=Question about: Maximizing Exchange Value" class="text-patriot-blue hover:text-navy transition flex items-center">
+                            <span>Read More</span>
+                            <i data-lucide="arrow-right" class="h-5 w-5 ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Resort Reviews Article -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="calendar" class="h-5 w-5 text-patriot-red mr-2"></i>
+                            <span class="text-gray-600">January 10, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">
+                            Top Rated Resorts of 2025
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Our annual roundup of the highest-rated timeshare resorts, featuring amenities, locations, and owner reviews.
+                        </p>
+                        <a href="mailto:support@lrvforum.com?subject=Question about: Top Rated Resorts of 2025" class="text-patriot-blue hover:text-navy transition flex items-center">
+                            <span>Read More</span>
+                            <i data-lucide="arrow-right" class="h-5 w-5 ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Topics Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-navy text-center mb-12">Popular Topics</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="mailto:support@lrvforum.com?subject=Articles about: Buying Tips" class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition">
+                    <i data-lucide="shopping-cart" class="h-8 w-8 text-patriot-red mx-auto mb-2"></i>
+                    <span class="text-navy font-semibold">Buying Tips</span>
+                </a>
+                <a href="mailto:support@lrvforum.com?subject=Articles about: Maintenance" class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition">
+                    <i data-lucide="wrench" class="h-8 w-8 text-patriot-red mx-auto mb-2"></i>
+                    <span class="text-navy font-semibold">Maintenance</span>
+                </a>
+                <a href="mailto:support@lrvforum.com?subject=Articles about: Exchanges" class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition">
+                    <i data-lucide="refresh-cw" class="h-8 w-8 text-patriot-red mx-auto mb-2"></i>
+                    <span class="text-navy font-semibold">Exchanges</span>
+                </a>
+                <a href="mailto:support@lrvforum.com?subject=Articles about: Resort Reviews" class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition">
+                    <i data-lucide="star" class="h-8 w-8 text-patriot-red mx-auto mb-2"></i>
+                    <span class="text-navy font-semibold">Resort Reviews</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About LRV Forum</h3>
+                    <p class="text-gray-300">
+                        A veteran-owned platform dedicated to empowering timeshare owners, brokers, buyers, and renters.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/pages/buy.html" class="text-gray-300 hover:text-white">Buy</a></li>
+                        <li><a href="/pages/rent.html" class="text-gray-300 hover:text-white">Rent</a></li>
+                        <li><a href="/pages/sell.html" class="text-gray-300 hover:text-white">Sell</a></li>
+                        <li><a href="/pages/about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Community</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/pages/community/forum.html" class="text-gray-300 hover:text-white">Forum</a></li>
+                        <li><a href="/pages/community/owner-network.html" class="text-gray-300 hover:text-white">Owner Network</a></li>
+                        <li><a href="/pages/community/veteran-community.html" class="text-gray-300 hover:text-white">Veteran Community</a></li>
+                        <li><a href="/pages/blog" class="text-gray-300 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <p class="text-gray-300 flex items-center gap-2">
+                        <i data-lucide="mail" class="h-5 w-5"></i>
+                        support@lrvforum.com
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
+                <p>&copy; 2025 LRV Forum. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

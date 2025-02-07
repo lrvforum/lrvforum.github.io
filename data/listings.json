@@ -1,0 +1,188 @@
+{
+  "listings": [
+    {
+      "id": "1",
+      "title": "Luxury Ocean View Villa - Maui Sunset Resort",
+      "description": "Stunning oceanfront villa with breathtaking views of the Pacific. This premium timeshare features modern amenities, spacious living areas, and direct beach access. Perfect for families seeking an unforgettable Hawaiian experience.",
+      "location": "Maui, Hawaii",
+      "price": 45000,
+      "is_verified": true,
+      "is_featured": true,
+      "status": "published",
+      "created_at": "2025-01-15T08:00:00Z",
+      "amenities": [
+        "Ocean View",
+        "Beach Access",
+        "Swimming Pool",
+        "Spa",
+        "Fitness Center",
+        "Restaurant",
+        "Room Service",
+        "Concierge"
+      ],
+      "latitude": 20.7984,
+      "longitude": -156.3319
+    },
+    {
+      "id": "2",
+      "title": "Mountain Lodge Suite - Vail Ski Resort",
+      "description": "Cozy mountain retreat in the heart of Vail. This ski-in/ski-out property offers premium access to world-class slopes, heated pools, and luxury spa services. Ideal for winter sports enthusiasts.",
+      "location": "Vail, Colorado",
+      "price": 35000,
+      "is_verified": true,
+      "is_featured": true,
+      "status": "published",
+      "created_at": "2025-01-20T10:30:00Z",
+      "amenities": [
+        "Ski-in/Ski-out",
+        "Heated Pool",
+        "Hot Tub",
+        "Fireplace",
+        "Equipment Storage",
+        "Shuttle Service",
+        "Bar & Lounge",
+        "Parking"
+      ],
+      "latitude": 39.6433,
+      "longitude": -106.3781
+    },
+    {
+      "id": "3",
+      "title": "Beachfront Condo - Orlando Resort & Spa",
+      "description": "Family-friendly resort condo near major theme parks. Features multiple pools, water slides, and organized activities for children. Perfect for creating magical family memories.",
+      "location": "Orlando, Florida",
+      "price": 28000,
+      "is_verified": true,
+      "is_featured": true,
+      "status": "published",
+      "created_at": "2025-01-25T09:15:00Z",
+      "amenities": [
+        "Theme Park Shuttle",
+        "Water Park",
+        "Kids Club",
+        "Mini Golf",
+        "Multiple Pools",
+        "Restaurant",
+        "Game Room",
+        "WiFi"
+      ],
+      "latitude": 28.5383,
+      "longitude": -81.3792
+    },
+    {
+      "id": "4",
+      "title": "Desert Oasis Villa - Scottsdale Resort",
+      "description": "Luxurious desert retreat featuring stunning mountain views and world-class golf courses. Enjoy the serene desert landscape while indulging in premium amenities and spa services.",
+      "location": "Scottsdale, Arizona",
+      "price": 32000,
+      "is_verified": true,
+      "is_featured": false,
+      "status": "published",
+      "created_at": "2025-02-01T11:45:00Z",
+      "amenities": [
+        "Golf Course",
+        "Desert Views",
+        "Spa Services",
+        "Tennis Courts",
+        "Pool",
+        "Fine Dining",
+        "Fitness Center",
+        "Business Center"
+      ],
+      "latitude": 33.4942,
+      "longitude": -111.9261
+    },
+    {
+      "id": "5",
+      "title": "Lakefront Cottage - Lake Tahoe Resort",
+      "description": "Charming lakefront property offering year-round outdoor activities. Perfect for both summer water sports and winter skiing. Features private beach access and stunning lake views.",
+      "location": "Lake Tahoe, Nevada",
+      "price": 40000,
+      "is_verified": true,
+      "is_featured": false,
+      "status": "published",
+      "created_at": "2025-02-05T14:20:00Z",
+      "amenities": [
+        "Lake Access",
+        "Private Beach",
+        "Boat Dock",
+        "Ski Storage",
+        "Fireplace",
+        "BBQ Area",
+        "Hiking Trails",
+        "Water Sports"
+      ],
+      "latitude": 39.0968,
+      "longitude": -120.0324
+    },
+    {
+      "id": "6",
+      "title": "Oceanfront Suite - Myrtle Beach Resort",
+      "description": "Beautiful oceanfront suite in the heart of Myrtle Beach. Enjoy direct beach access, multiple pools, and endless entertainment options. Perfect for golf enthusiasts and beach lovers.",
+      "location": "Myrtle Beach, South Carolina",
+      "price": 25000,
+      "is_verified": false,
+      "is_featured": false,
+      "status": "published",
+      "created_at": "2025-02-10T16:00:00Z",
+      "amenities": [
+        "Beach Access",
+        "Golf Package",
+        "Multiple Pools",
+        "Lazy River",
+        "Restaurant",
+        "Tiki Bar",
+        "Entertainment",
+        "Parking"
+      ],
+      "latitude": 33.6891,
+      "longitude": -78.8867
+    },
+    {
+      "id": "7",
+      "title": "Mountain View Condo - Park City Resort",
+      "description": "Elegant mountain condo offering premium access to ski slopes and summer hiking trails. Features luxury amenities and stunning mountain views. Perfect for outdoor enthusiasts.",
+      "location": "Park City, Utah",
+      "price": 38000,
+      "is_verified": true,
+      "is_featured": false,
+      "status": "published",
+      "created_at": "2025-02-15T13:30:00Z",
+      "amenities": [
+        "Ski Access",
+        "Mountain Views",
+        "Hot Tub",
+        "Heated Pool",
+        "Fitness Center",
+        "Spa",
+        "Restaurant",
+        "Concierge"
+      ],
+      "latitude": 40.6461,
+      "longitude": -111.4980
+    },
+    {
+      "id": "8",
+      "title": "Tropical Paradise Villa - Key West Resort",
+      "description": "Luxurious villa in the heart of Key West. Experience the perfect blend of relaxation and adventure with water sports, fishing trips, and sunset cruises right at your doorstep.",
+      "location": "Key West, Florida",
+      "price": 42000,
+      "is_verified": true,
+      "is_featured": false,
+      "status": "published",
+      "created_at": "2025-02-20T15:45:00Z",
+      "amenities": [
+        "Ocean View",
+        "Private Pool",
+        "Water Sports",
+        "Fishing Trips",
+        "Sunset Cruises",
+        "Bar & Grill",
+        "Spa Services",
+        "Concierge"
+      ],
+      "latitude": 24.5551,
+      "longitude": -81.7800
+    }
+  ]
+}

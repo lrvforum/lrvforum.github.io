@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Forum - LRV Forum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#001f3f',
+                        'navy-light': '#003366',
+                        'patriot-red': '#B22234',
+                        'patriot-blue': '#3C3B6E',
+                        'patriot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide-icons/dist/umd/lucide-icons.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-navy shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center group">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                                <div class="text-patriot-red font-bold text-xl">LRV</div>
+                            </div>
+                            <span class="ml-2 text-white font-bold text-xl group-hover:text-patriot-white transition-colors">Forum</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Primary Navigation -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="/pages/buy.html" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="dollar-sign" class="h-5 w-5 mr-2"></i>
+                        Buy
+                    </a>
+                    <a href="/pages/rent.html" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="home" class="h-5 w-5 mr-2"></i>
+                        Rent
+                    </a>
+                    <a href="/pages/sell.html" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="plus-circle" class="h-5 w-5 mr-2"></i>
+                        List
+                    </a>
+                    <a href="/pages/community" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="users" class="h-5 w-5 mr-2"></i>
+                        Community
+                    </a>
+                    <a href="/pages/blog" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="book-open" class="h-5 w-5 mr-2"></i>
+                        Blog
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-navy-light">
+                <div class="grid grid-cols-2 gap-2 px-3 mb-4">
+                    <a href="/pages/buy.html" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="dollar-sign" class="h-5 w-5 mr-2"></i>
+                        Buy
+                    </a>
+                    <a href="/pages/rent.html" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="home" class="h-5 w-5 mr-2"></i>
+                        Rent
+                    </a>
+                    <a href="/pages/sell.html" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="plus-circle" class="h-5 w-5 mr-2"></i>
+                        List
+                    </a>
+                    <a href="/pages/community" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="users" class="h-5 w-5 mr-2"></i>
+                        Community
+                    </a>
+                    <a href="/pages/blog" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition col-span-2">
+                        <i data-lucide="book-open" class="h-5 w-5 mr-2"></i>
+                        Blog
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4">Discussion Forum</h1>
+            <p class="text-xl text-gray-300">
+                Browse popular topics and join the conversation about timeshare ownership.
+            </p>
+        </div>
+    </div>
+
+    <!-- Forum Categories -->
+    <div class="bg-gray-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- General Discussion -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-navy mb-6">General Discussion</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="message-circle" class="h-8 w-8 text-patriot-blue"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-navy">Tips for First-Time Timeshare Buyers</h3>
+                                <p class="text-gray-600 mt-1">Essential advice and considerations for those new to timeshare ownership.</p>
+                                <div class="mt-4">
+                                    <a href="mailto:support@lrvforum.com?subject=Question about: Tips for First-Time Timeshare Buyers" class="text-patriot-blue hover:text-navy transition flex items-center gap-2">
+                                        <i data-lucide="mail" class="h-4 w-4"></i>
+                                        Join Discussion
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="message-circle" class="h-8 w-8 text-patriot-blue"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-navy">Maintenance Fee Discussion</h3>
+                                <p class="text-gray-600 mt-1">Share experiences and strategies for managing maintenance fees effectively.</p>
+                                <div class="mt-4">
+                                    <a href="mailto:support@lrvforum.com?subject=Question about: Maintenance Fee Discussion" class="text-patriot-blue hover:text-navy transition flex items-center gap-2">
+                                        <i data-lucide="mail" class="h-4 w-4"></i>
+                                        Join Discussion
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resort Reviews -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-navy mb-6">Resort Reviews</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="star" class="h-8 w-8 text-patriot-red"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-navy">Maui Sunset Resort Reviews</h3>
+                                <p class="text-gray-600 mt-1">Share your experiences and read reviews about Maui Sunset Resort.</p>
+                                <div class="mt-4">
+                                    <a href="mailto:support@lrvforum.com?subject=Review for: Maui Sunset Resort" class="text-patriot-blue hover:text-navy transition flex items-center gap-2">
+                                        <i data-lucide="mail" class="h-4 w-4"></i>
+                                        Share Review
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="star" class="h-8 w-8 text-patriot-red"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-navy">Vail Ski Resort Reviews</h3>
+                                <p class="text-gray-600 mt-1">Discuss your experiences at Vail Ski Resort and share tips for future visitors.</p>
+                                <div class="mt-4">
+                                    <a href="mailto:support@lrvforum.com?subject=Review for: Vail Ski Resort" class="text-patriot-blue hover:text-navy transition flex items-center gap-2">
+                                        <i data-lucide="mail" class="h-4 w-4"></i>
+                                        Share Review
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exchange Tips -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-navy mb-6">Exchange Tips</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="refresh-cw" class="h-8 w-8 text-patriot-blue"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-navy">Maximizing Exchange Value</h3>
+                                <p class="text-gray-600 mt-1">Learn strategies for getting the most value from your timeshare exchanges.</p>
+                                <div class="mt-4">
+                                    <a href="mailto:support@lrvforum.com?subject=Question about: Maximizing Exchange Value" class="text-patriot-blue hover:text-navy transition flex items-center gap-2">
+                                        <i data-lucide="mail" class="h-4 w-4"></i>
+                                        Join Discussion
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="refresh-cw" class="h-8 w-8 text-patriot-blue"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-navy">Best Exchange Destinations</h3>
+                                <p class="text-gray-600 mt-1">Popular exchange destinations and tips for successful trades.</p>
+                                <div class="mt-4">
+                                    <a href="mailto:support@lrvforum.com?subject=Question about: Best Exchange Destinations" class="text-patriot-blue hover:text-navy transition flex items-center gap-2">
+                                        <i data-lucide="mail" class="h-4 w-4"></i>
+                                        Join Discussion
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Discussion -->
+    <div class="bg-white py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-navy mb-4">Start a New Discussion</h2>
+                <p class="text-gray-600">
+                    Have a question or want to share your experience? Start a new discussion thread.
+                </p>
+            </div>
+
+            <form action="mailto:support@lrvforum.com" method="GET" enctype="text/plain" class="space-y-6">
+                <div>
+                    <label for="topic" class="block text-sm font-medium text-gray-700 mb-1">
+                        Topic
+                    </label>
+                    <select name="topic" id="topic" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue">
+                        <option value="">Select Topic</option>
+                        <option value="general">General Discussion</option>
+                        <option value="resort">Resort Reviews</option>
+                        <option value="exchange">Exchange Tips</option>
+                        <option value="maintenance">Maintenance Fees</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">
+                        Subject
+                    </label>
+                    <input type="text" name="subject" id="subject" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue">
+                </div>
+
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">
+                        Message
+                    </label>
+                    <textarea name="message" id="message" rows="4" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue"></textarea>
+                </div>
+
+                <div class="pt-4">
+                    <button type="submit"
+                        class="w-full bg-patriot-blue text-white py-3 rounded-lg hover:bg-blue-700 transition flex items-center justify-center">
+                        <i data-lucide="send" class="h-5 w-5 mr-2"></i>
+                        Start Discussion
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About LRV Forum</h3>
+                    <p class="text-gray-300">
+                        A veteran-owned platform dedicated to empowering timeshare owners, brokers, buyers, and renters.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/pages/buy.html" class="text-gray-300 hover:text-white">Buy</a></li>
+                        <li><a href="/pages/rent.html" class="text-gray-300 hover:text-white">Rent</a></li>
+                        <li><a href="/pages/sell.html" class="text-gray-300 hover:text-white">Sell</a></li>
+                        <li><a href="/pages/about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Community</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/pages/community/forum.html" class="text-gray-300 hover:text-white">Forum</a></li>
+                        <li><a href="/pages/community/owner-network.html" class="text-gray-300 hover:text-white">Owner Network</a></li>
+                        <li><a href="/pages/community/veteran-community.html" class="text-gray-300 hover:text-white">Veteran Community</a></li>
+                        <li><a href="/pages/blog" class="text-gray-300 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <p class="text-gray-300 flex items-center gap-2">
+                        <i data-lucide="mail" class="h-5 w-5"></i>
+                        support@lrvforum.com
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
+                <p>&copy; 2025 LRV Forum. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

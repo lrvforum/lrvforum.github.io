@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Timeshare - LRV Forum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#001f3f',
+                        'navy-light': '#003366',
+                        'patriot-red': '#B22234',
+                        'patriot-blue': '#3C3B6E',
+                        'patriot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide-icons/dist/umd/lucide-icons.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-navy shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center group">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                                <div class="text-patriot-red font-bold text-xl">LRV</div>
+                            </div>
+                            <span class="ml-2 text-white font-bold text-xl group-hover:text-patriot-white transition-colors">Forum</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Primary Navigation -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="/pages/buy.html" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="dollar-sign" class="h-5 w-5 mr-2"></i>
+                        Buy
+                    </a>
+                    <a href="/pages/rent.html" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="home" class="h-5 w-5 mr-2"></i>
+                        Rent
+                    </a>
+                    <a href="/pages/sell.html" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="plus-circle" class="h-5 w-5 mr-2"></i>
+                        List
+                    </a>
+                    <a href="/pages/community" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="users" class="h-5 w-5 mr-2"></i>
+                        Community
+                    </a>
+                    <a href="/pages/blog" class="flex items-center bg-patriot-red text-white px-6 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="book-open" class="h-5 w-5 mr-2"></i>
+                        Blog
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-navy-light">
+                <div class="grid grid-cols-2 gap-2 px-3 mb-4">
+                    <a href="/pages/buy.html" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="dollar-sign" class="h-5 w-5 mr-2"></i>
+                        Buy
+                    </a>
+                    <a href="/pages/rent.html" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="home" class="h-5 w-5 mr-2"></i>
+                        Rent
+                    </a>
+                    <a href="/pages/sell.html" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="plus-circle" class="h-5 w-5 mr-2"></i>
+                        List
+                    </a>
+                    <a href="/pages/community" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i data-lucide="users" class="h-5 w-5 mr-2"></i>
+                        Community
+                    </a>
+                    <a href="/pages/blog" class="flex items-center justify-center bg-patriot-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition col-span-2">
+                        <i data-lucide="book-open" class="h-5 w-5 mr-2"></i>
+                        Blog
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4">List Your Timeshare</h1>
+            <p class="text-xl text-gray-300">
+                Ready to sell or rent your timeshare? Fill out the form below and we'll help you get started.
+            </p>
+        </div>
+    </div>
+
+    <!-- Listing Form -->
+    <div class="bg-gray-50 py-12">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <form action="mailto:support@lrvforum.com" method="GET" enctype="text/plain" class="space-y-6">
+                    <div>
+                        <label for="listing_type" class="block text-sm font-medium text-gray-700 mb-1">
+                            Listing Type
+                        </label>
+                        <select name="listing_type" id="listing_type" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue">
+                            <option value="">Select Type</option>
+                            <option value="sale">For Sale</option>
+                            <option value="rent">For Rent</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first_name" class="block text-sm font-medium text-gray-700 mb-1">
+                                First Name
+                            </label>
+                            <input type="text" name="first_name" id="first_name" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue">
+                        </div>
+                        <div>
+                            <label for="last_name" class="block text-sm font-medium text-gray-700 mb-1">
+                                Last Name
+                            </label>
+                            <input type="text" name="last_name" id="last_name" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                            Email
+                        </label>
+                        <input type="email" name="email" id="email" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue">
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">
+                            Phone
+                        </label>
+                        <input type="tel" name="phone" id="phone" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue">
+                    </div>
+
+                    <div>
+                        <label for="resort_name" class="block text-sm font-medium text-gray-700 mb-1">
+                            Resort Name
+                        </label>
+                        <input type="text" name="resort_name" id="resort_name" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue">
+                    </div>
+
+                    <div>
+                        <label for="location" class="block text-sm font-medium text-gray-700 mb-1">
+                            Location
+                        </label>
+                        <input type="text" name="location" id="location" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue"
+                            placeholder="City, State">
+                    </div>
+
+                    <div>
+                        <label for="price" class="block text-sm font-medium text-gray-700 mb-1">
+                            Price
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">$</span>
+                            <input type="number" name="price" id="price" required min="0"
+                                class="w-full pl-8 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="description" class="block text-sm font-medium text-gray-700 mb-1">
+                            Description
+                        </label>
+                        <textarea name="description" id="description" rows="4" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-patriot-blue"
+                            placeholder="Please provide details about your timeshare, including unit size, amenities, and usage terms."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Are you a veteran?
+                        </label>
+                        <div class="flex items-center space-x-4">
+                            <label class="flex items-center">
+                                <input type="radio" name="is_veteran" value="yes" class="mr-2">
+                                Yes
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="is_veteran" value="no" class="mr-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit"
+                            class="w-full bg-patriot-blue text-white py-3 rounded-lg hover:bg-blue-700 transition flex items-center justify-center">
+                            <i data-lucide="send" class="h-5 w-5 mr-2"></i>
+                            Submit Listing
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="mt-8 bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-navy mb-4">Why List with Us?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i data-lucide="users" class="h-6 w-6 text-patriot-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Reach More Buyers</h3>
+                            <p class="text-gray-600 text-sm">
+                                Connect with a community of active timeshare buyers and renters.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i data-lucide="shield" class="h-6 w-6 text-patriot-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Veteran-Owned</h3>
+                            <p class="text-gray-600 text-sm">
+                                Work with a platform that understands service and integrity.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i data-lucide="check-circle" class="h-6 w-6 text-patriot-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Simple Process</h3>
+                            <p class="text-gray-600 text-sm">
+                                Easy listing submission and straightforward communication.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i data-lucide="heart" class="h-6 w-6 text-patriot-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Personal Support</h3>
+                            <p class="text-gray-600 text-sm">
+                                Get help every step of the way from our dedicated team.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About LRV Forum</h3>
+                    <p class="text-gray-300">
+                        A veteran-owned platform dedicated to empowering timeshare owners, brokers, buyers, and renters.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/pages/buy.html" class="text-gray-300 hover:text-white">Buy</a></li>
+                        <li><a href="/pages/rent.html" class="text-gray-300 hover:text-white">Rent</a></li>
+                        <li><a href="/pages/sell.html" class="text-gray-300 hover:text-white">Sell</a></li>
+                        <li><a href="/pages/about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Community</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/pages/community/forum.html" class="text-gray-300 hover:text-white">Forum</a></li>
+                        <li><a href="/pages/community/owner-network.html" class="text-gray-300 hover:text-white">Owner Network</a></li>
+                        <li><a href="/pages/community/veteran-community.html" class="text-gray-300 hover:text-white">Veteran Community</a></li>
+                        <li><a href="/pages/blog" class="text-gray-300 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <p class="text-gray-300 flex items-center gap-2">
+                        <i data-lucide="mail" class="h-5 w-5"></i>
+                        support@lrvforum.com
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
+                <p>&copy; 2025 LRV Forum. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
